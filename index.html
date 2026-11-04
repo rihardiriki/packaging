@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="id"><head><meta charset="utf-8"><title>PM – Permintaan Packaging</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2548D0">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="PM Packaging">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <style>
@@ -181,4 +189,6 @@ if(y>240){d.addPage();y=18}y+=6;
 return d.output('arraybuffer')}
 if(typeof claude!=='undefined'&&claude.use){claude.use('downloads').then(x=>{DL=x;render()}).catch(()=>{});}
 render();
+
+if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){})})}
 </script></body></html>
