@@ -1,10 +1,11 @@
 {
   "name": "PM – Permintaan Packaging",
   "short_name": "PM Packaging",
-  "description": "Aplikasi permintaan packaging",
+  "description": "Aplikasi permintaan material packing per SPK.",
   "lang": "id",
   "start_url": "./index.html",
   "scope": "./",
+  "id": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#F8FAFC",
